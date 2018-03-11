@@ -11,6 +11,8 @@ public class TrapBlockerListener implements Listener {
 	@EventHandler
 	public void onBlockClick(PlayerInteractEvent e) {
 		
+		if(!e.getPlayer().isOp()) {
+			
 		if(e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
 			
 		
@@ -33,7 +35,7 @@ public class TrapBlockerListener implements Listener {
 			e.setCancelled(true);
 		}else {
 			return;
-		}}
+		}}}
 		
 		
 	}
