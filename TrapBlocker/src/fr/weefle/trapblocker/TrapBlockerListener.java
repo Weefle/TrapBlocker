@@ -2,6 +2,7 @@ package fr.weefle.trapblocker;
 
 import org.bukkit.Material;
 import org.bukkit.entity.ItemFrame;
+import org.bukkit.entity.Painting;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -83,6 +84,8 @@ if(!e.getDamager().isOp()) {
 				
 			
 			if(e.getEntity() instanceof ItemFrame) {
+				e.setCancelled(true);
+			}else if(e.getEntity() instanceof Painting){
 				e.setCancelled(true);
 			}else {
 				return;
