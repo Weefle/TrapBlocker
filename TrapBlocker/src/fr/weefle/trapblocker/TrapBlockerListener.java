@@ -70,6 +70,8 @@ if(!e.getRemover().isOp()) {
 			
 			if(e.getEntity() instanceof ItemFrame) {
 				e.setCancelled(true);
+			}else if(e.getEntity() instanceof Painting) {
+				e.setCancelled(true);
 			}else {
 				return;
 			}
@@ -85,9 +87,7 @@ if(!e.getDamager().isOp()) {
 			
 			if(e.getEntity() instanceof ItemFrame) {
 				e.setCancelled(true);
-			}else if(e.getEntity() instanceof Painting){
-				e.setCancelled(true);
-			}else {
+}else {
 				return;
 			}
 			}
